@@ -3,7 +3,7 @@
 
 A modular toolkit for creating, minting, and managing programmable NFTs on Stellar using Soroban smart contracts, native asset issuance, and seamless global payments.
 
-Featurs a powerful **AI-powered Node-Based UI Image Generator** with React Flow and HashLips engine integration.
+Features a powerful **AI-powered Node-Based UI Image Generator** with React Flow and HashLips engine integration.
 
 ---
 ## ✨ Overview
