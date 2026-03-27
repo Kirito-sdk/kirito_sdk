@@ -3,7 +3,7 @@
 
 A modular toolkit for creating, minting, and managing programmable NFTs on Stellar using Soroban smart contracts, native asset issuance, and seamless global payments.
 
-Now featuring a powerful **AI-powered Node-Based Image Generator** with React Flow and HashLips engine integration.
+Featurs a powerful **AI-powered Node-Based UI Image Generator** with React Flow and HashLips engine integration.
 
 ---
 ## ✨ Overview
@@ -29,7 +29,7 @@ This enables creators to build NFTs that are not only visually unique but also f
 * **Wallet Integration** — Freighter and other Stellar wallets
 * **Low Fees + High Speed** — Designed for mass adoption
 
-### ✨ New: AI Image Generator (Node-Based)
+### AI Image Generator (Node-Based)
 * **Visual Node Editor** powered by **React Flow**
 * Drag-and-drop nodes for layers, AI prompts, transformations, combiners, and outputs
 * **HashLips Art Engine Integration** — Battle-tested layer-based generative art (now with AI enhancements)
@@ -43,7 +43,7 @@ This enables creators to build NFTs that are not only visually unique but also f
 
 Kirito SDK is built with modular, composable layers:
 
-1. **AI Image Generation Engine** ← *New*
+1. **AI Image Generation Engine**
    - React Flow node-based UI
    - HashLips core (layer stacking, trait generation, metadata)
    - AI nodes (prompt-based generation, upscaling, style transfer, etc.)
@@ -131,7 +131,7 @@ const collection = await sdk.createCollection({
 });
 ```
 
-### 4. Use the New AI Image Generator (Node-Based)
+### 4. Use the AI Image Generator (Node-Based)
 
 ```tsx
 import { KiritoImageGenerator } from "@kirito/stellar-sdk/ui";
