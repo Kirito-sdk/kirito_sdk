@@ -1,328 +1,262 @@
-# Kirito SDK
-> **Forge Composable, Yield-Enabled NFTs on Stellar – Where Creativity Meets Real-World Finance**
+# Kirito SDK  
+> **Composable Digital Assets on Stellar — Build Programmable NFTs, Tokenized Memberships, Rewards, and Creator Finance with Soroban**
 
-A modular toolkit for creating, minting, and managing programmable NFTs on Stellar using Soroban smart contracts, native asset issuance, and seamless global payments.
+Kirito SDK is a developer toolkit for building **programmable digital assets on Stellar** using **Soroban smart contracts**, **native asset issuance**, and **global low-cost payments**.
 
-Features a powerful **AI-powered Node-Based UI Image Generator** with React Flow and HashLips engine integration.
-
----
-## ✨ Overview
-
-Kirito SDK transforms traditional NFTs into **dynamic, utility-driven financial assets** on the Stellar network.
-
-It combines:
-- Stellar’s ultra-low fees, fast finality, and native payments
-- Programmable Soroban smart contracts
-- **Visual AI image generation** using a node-based editor (React Flow) + HashLips-style generative art engine
-
-This enables creators to build NFTs that are not only visually unique but also financially programmable — perfect for yield-bearing art, memberships, RWAs, and more.
+It helps developers and creators launch next-generation NFTs, memberships, loyalty assets, creator rewards, and tokenized experiences with a modern visual workflow.
 
 ---
-## 🚀 Features
 
-### Core NFT Features
-* **Programmable NFTs (Soroban)** — Smart NFTs with embedded logic
-* **Multi-Asset Rewards** — Yield distribution in USDC or custom tokens
-* **Native Payments Integration** — Built-in Stellar payment rails
-* **Token Issuance Engine** — Create and manage custom assets
-* **Marketplace Support** — Auctions, fixed pricing, royalties
-* **Wallet Integration** — Freighter and other Stellar wallets
-* **Low Fees + High Speed** — Designed for mass adoption
+# ✨ Why Kirito SDK?
 
-### AI Image Generator (Node-Based)
-* **Visual Node Editor** powered by **React Flow**
-* Drag-and-drop nodes for layers, AI prompts, transformations, combiners, and outputs
-* **HashLips Art Engine Integration** — Battle-tested layer-based generative art (now with AI enhancements)
-* Real-time preview of generated images
-* Export metadata-ready assets (images + JSON attributes)
-* Support for trait rarity, rarity rules, and custom logic nodes
-* Bridge generated art directly into NFT minting workflows
+Most NFT tooling focuses only on minting images.
+
+Kirito SDK focuses on **utility + payments + programmability** using Stellar infrastructure.
+
+With Kirito SDK, digital assets can become:
+
+- Revenue-sharing memberships  
+- Reward-bearing collectibles  
+- Event access passes  
+- Loyalty and engagement tokens  
+- Tokenized real-world experiences  
+- AI-generated creator collections  
+- Cross-border monetization tools  
 
 ---
-## 🏗 Architecture
 
-Kirito SDK is built with modular, composable layers:
+# 🌍 Why Stellar?
 
-1. **AI Image Generation Engine**
-   - React Flow node-based UI
-   - HashLips core (layer stacking, trait generation, metadata)
-   - AI nodes (prompt-based generation, upscaling, style transfer, etc.)
+Kirito SDK is purpose-built for the Stellar ecosystem.
 
-2. **NFT Generation Engine**
-   - Trait-based creation with rich metadata
+### Stellar Advantages:
 
-3. **Soroban Contract Layer**
-   - Minting, transfers, and programmable logic
+- **Ultra-low transaction fees**
+- **Fast finality**
+- **Global payment rails**
+- **Native asset issuance**
+- **USDC / stablecoin ecosystem**
+- **Soroban smart contracts**
+- **Accessible worldwide**
 
-4. **Asset Engine**
-   - Custom token issuance for rewards/governance
-
-5. **Reward Distribution Manager**
-   - Automated yield and royalty payouts
-
-6. **Payment Layer**
-   - Fast, cheap Stellar transactions
-
-7. **Marketplace Engine**
-   - Listings, bidding, royalty enforcement
-
-8. **Wallet & Storage Layer**
-   - Freighter integration + IPFS/Arweave
-
-9. **Interoperability Layer**
-   - Cross-chain support
+This makes Stellar ideal for mass-market creator products and digital ownership.
 
 ---
-## 📦 Installation
+
+# 🚀 Core Features
+
+## Soroban Asset Layer
+
+- Programmable NFTs with on-chain logic
+- Royalties and payout automation
+- Transfer restrictions / gated access
+- Dynamic metadata support
+- Ownership utilities
+
+## Stellar Payments Layer
+
+- Accept payments globally
+- USDC rewards and creator payouts
+- Low-fee purchases and subscriptions
+- Revenue sharing to holders
+
+## Asset Issuance Layer
+
+- Launch branded tokens
+- Reward currencies
+- Governance assets
+- Community loyalty systems
+
+## Wallet Support
+
+- Freighter
+- Stellar wallets
+- Simple onboarding flows
+
+---
+
+# 🎨 Visual Creator Engine
+
+Kirito SDK includes a **Node-Based Asset Studio** for creators and non-technical teams.
+
+Built with:
+
+- React Flow
+- Layer pipelines
+- Trait logic
+- Metadata generation
+- AI image workflows
+- Collection export tools
+
+Users can visually build collections and mint directly into Stellar-powered products.
+
+---
+
+# 🏗 Architecture
+
+```text
+kirito-sdk/
+├── contracts/        Soroban smart contracts
+├── sdk/              Core TypeScript SDK
+├── payments/         Stellar transaction tools
+├── assets/           Native asset issuance
+├── rewards/          Royalty + yield logic
+├── ui/               React components
+├── studio/           Visual node editor
+├── storage/          IPFS / Arweave
+└── examples/
+```
+---
+
+# ⚡ Quick Start
+
+## Install
 
 ```bash
 npm install @kirito/stellar-sdk
-# or
-yarn add @kirito/stellar-sdk
-# or
-pnpm add @kirito/stellar-sdk
 ```
 
-For the **AI Image Generator UI** (React component):
-
-```bash
-npm install @kirito/stellar-sdk @xyflow/react  # React Flow is now a peer dependency
-```
-
----
-## ⚙️ Prerequisites
-
-* Node.js 18+
-* Stellar wallet (e.g. Freighter)
-* Soroban CLI (optional)
-* For UI: React 18+ (or Next.js)
-
----
-## 🚀 Quick Start
-
-### 1. Initialize SDK
+## Initialize
 
 ```ts
 import { createKiritoSDK } from "@kirito/stellar-sdk";
 
 const sdk = createKiritoSDK({
-  network: "testnet",
-  rpcUrl: "https://soroban-testnet.stellar.org",
+  network: "testnet"
 });
 
 await sdk.initialize();
 ```
 
-### 2. Connect Wallet
+## Connect Wallet
 
 ```ts
-const wallet = await sdk.connectWallet();
-console.log("Connected:", wallet.address);
+await sdk.connectWallet();
 ```
 
-### 3. Create NFT Collection
+## Create Collection
 
 ```ts
-const collection = await sdk.createCollection({
-  name: "Kirito Genesis",
-  symbol: "KIRITO",
-  supply: 1000,
-  metadataBaseURI: "ipfs://...",
+await sdk.createCollection({
+  name: "Genesis Access",
+  symbol: "GEN"
 });
 ```
 
-### 4. Use the AI Image Generator (Node-Based)
-
-```tsx
-import { KiritoImageGenerator } from "@kirito/stellar-sdk/ui";
-import { useState } from "react";
-
-function App() {
-  const [generatedAssets, setGeneratedAssets] = useState([]);
-
-  return (
-    <KiritoImageGenerator
-      onGenerateComplete={(assets) => {
-        console.log("Generated NFTs ready:", assets);
-        setGeneratedAssets(assets); // { image, metadata, traits }
-      }}
-      hashlipsConfig={{
-        // Optional: customize layers, rarity, etc.
-        layersOrder: ["background", "body", "eyes", ...],
-      }}
-      stellarCollectionId={collection.id}
-    />
-  );
-}
-```
-
-**Inside the node editor** you can:
-- Add **Layer Nodes** (background, clothing, accessories…)
-- Connect **AI Prompt Nodes** for generative elements
-- Use **Combiners**, **Rarity Filters**, and **Transform Nodes**
-- Preview in real-time
-- Export directly to IPFS-ready format for minting
-
-### 5. Mint Generated NFTs
+## Mint Asset
 
 ```ts
-for (const asset of generatedAssets) {
-  const nft = await sdk.mintNFT({
-    collectionId: collection.id,
-    owner: wallet.address,
-    metadata: asset.metadata,
-    imageURI: asset.image,
-  });
-}
+await sdk.mintNFT({
+  owner: wallet.address,
+  metadata: {...}
+});
 ```
 
-### 6. Distribute Rewards
+## Reward Holders
 
 ```ts
 await sdk.distributeRewards({
-  tokenId: nft.tokenId,
   asset: "USDC",
-  amount: "10",
+  amount: "100"
 });
 ```
 
 ---
-## 💡 Use Cases
 
-* **Creator Monetization** — Yield-paying generative art
-* **Membership NFTs** — Visual + utility access tokens
-* **Real-World Asset Tokenization** — Beautifully rendered fractional ownership
-* **Gaming & Loyalty** — Procedurally generated avatars with on-chain rewards
-* **Event Ticketing** — Unique visual tickets with royalties
-* **AI Art Collections** — Node-based workflows for complex generative drops
+# 💡 Use Cases
 
----
-## 🔄 Example Workflow
+## Creator Economy
 
-1. Design generative pipeline in **React Flow** node editor
-2. Generate thousands of unique images + metadata via HashLips engine
-3. Create collection on Stellar
-4. Mint NFTs with embedded yield logic
-5. Distribute rewards and enable marketplace trading
+* Sell memberships globally
+* Share revenue to supporters
+* Launch branded collections
 
----
-## 🧪 Testing
+## Events & Communities
 
-```bash
-npm test
-```
+* NFT tickets
+* Access passes
+* Loyalty rewards
 
----
-## 🌐 Networks
+## Gaming
 
-* **Stellar Testnet**
-* **Stellar Mainnet**
+* Dynamic skins
+* Collectibles
+* Achievement assets
 
----
-## 🔐 Security Best Practices
+## Education
 
-* Never expose private keys
-* Use environment variables for secrets
-* Validate all inputs (especially node configurations)
-* Audit Soroban contracts before mainnet deployment
+* Certificates
+* Membership credentials
+* Reward systems
+
+## Real World Assets
+
+* Fractional access models
+* Ownership certificates
+* Revenue-linked collectibles
 
 ---
-## 📁 Project Structure
 
-```
-kirito-stellar-sdk/
-├── src/
-│   ├── sdk/              # Core SDK logic
-│   ├── contracts/        # Soroban contracts
-│   ├── generation/       # NFT & metadata generation
-│   ├── image-generator/  # ← New: React Flow + HashLips integration
-│   ├── ui/               # React components (KiritoImageGenerator, nodes, etc.)
-│   ├── wallet/
-│   ├── marketplace/
-│   └── utils/
-├── tests/
-├── examples/
-├── docs/
-└── README.md
-```
+# 🔥 Why This Matters for Stellar
+
+Kirito SDK helps expand Stellar into:
+
+* Creator commerce
+* Consumer apps
+* NFT utility products
+* Stablecoin reward systems
+* Global memberships
+* Next-gen asset issuance
+
+This is not just NFT minting.
+
+It is **developer infrastructure for digital ownership + programmable payments on Stellar**.
 
 ---
-## 🛠 Development
 
-```bash
-# Install dependencies
-npm install
+# 🧪 Roadmap
 
-# Build project
-npm run build
-
-# Run tests
-npm test
-
-# Start dev mode (includes UI hot reload)
-npm run dev
-```
-
----
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/amazing-node`)
-3. Add tests for new nodes or engine features
-4. Submit a PR
-
-We especially welcome contributions to the **node types**, **AI integrations**, and **HashLips plugin system**.
-
----
-## 📚 Documentation
-
-* API Reference (coming soon)
-* [Node-Based Image Generator Guide](./docs/image-generator.md)
-* Soroban Contract Guide
-* Examples directory
-
----
-## 🗺 Roadmap
-
-* [x] NFT minting engine
-* [x] Reward distribution system
-* [x] Wallet integration
-* [x] **AI Node-Based Image Generator with React Flow + HashLips**
-* [ ] Marketplace contracts
-* [ ] Advanced AI nodes (Stable Diffusion / Flux integration, etc.)
-* [ ] Cross-chain bridges
+* [x] SDK Core
+* [x] Wallet Integration
+* [x] Minting Engine
+* [x] Reward Distribution
+* [x] Visual Asset Studio
+* [ ] Marketplace Contracts
+* [ ] Subscription NFTs
+* [ ] DAO Modules
+* [ ] Cross-chain Asset Rails
 * [ ] Mobile SDK
-* [ ] DAO governance
-
----
-## 🌍 Why Stellar + Visual Generation?
-
-Stellar brings financial infrastructure.  
-**React Flow + HashLips** brings intuitive, powerful creative tools.  
-
-Together they make high-quality, yield-enabled NFT creation accessible to artists, developers, and brands worldwide.
-
----
-## 📜 License
-
-MIT License
-
----
-## ❤️ Acknowledgments
-
-* Stellar ecosystem & Soroban team
-* HashLips Art Engine (and HashLips Lab)
-* React Flow / xyflow team
-* Open-source contributors
-
----
-## 🌐 Community
-
-* GitHub: [https://github.com/kirito-sdk](https://github.com/kirito-sdk)
-* Discord: (coming soon)
-* Twitter: (coming soon)
 
 ---
 
-**Made with ❤️ for the Stellar ecosystem + the next generation of visual creators**
+# 🤝 Open Source
+
+We welcome contributors in:
+
+* Soroban smart contracts
+* Stellar integrations
+* React UI
+* Asset tooling
+* Documentation
+* Creator workflows
+
+---
+
+# 🌐 Community
+
+* GitHub: github.com/kirito-sdk
+* Discord: Coming Soon
+* Docs: Coming Soon
+
+---
+
+# ❤️ Built for the Stellar Ecosystem
+
+Kirito SDK brings together:
+
+**Creators + Developers + Payments + Ownership**
+
+Powered by Stellar.
+
+```
 ```
